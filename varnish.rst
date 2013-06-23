@@ -52,6 +52,8 @@ Varnish Gotcha
 
 1. By default (and design) Varnish does not cache content with cookies in it. So you have to exclude/remove cookies in the VCL config file to bypass this.
 
+2. Varnish also does not deal with HTTPS, because encryption makes it impossible for Varnish to distinguish what the objects are that it is passing back and forth from the user to the backend. There are workarounds (like installing Pound) in front of Varnish and terminating SSL/TLS there.
+
 https://www.varnish-cache.org/trac/wiki/VCLExampleCacheCookies
 
 
@@ -282,3 +284,5 @@ Useful Links
 
 1. https://www.varnish-cache.org/
 2. http://chase-seibert.github.io/blog/2011/09/23/varnish-caching-for-unauthenticated-django-views.html
+3. http://blog.bigdinosaur.org/adventures-in-varnish/
+4. http://www.nedproductions.biz/wiki/a-perfected-varnish-reverse-caching-proxy-vcl-script
