@@ -246,8 +246,22 @@ Benchmarks (Exciting!)
 .. code:: sh
 
     (thack2012)[nai:~/Work/thack2012]$ siege -c50 -r10 -v http://dev.tripevent.co/map/pycon-sg
+    With Varnish
 
-    Without Varnish (nginx only)
+    Transactions:                   998 hits
+    Availability:                 99.90 %
+    Elapsed time:                170.38 secs
+    Data transferred:             2.01 MB
+    Response time:                  7.50 secs
+    Transaction rate:             5.86 trans/sec
+    Throughput:                  0.01 MB/sec
+    Concurrency:                 43.91
+    Successful transactions:         998
+    Failed transactions:                1
+    Longest transaction:            15.43
+    Shortest transaction:             0.16
+
+    Without Varnish
 
     Transactions:                  1000 hits
     Availability:                100.00 %
@@ -264,7 +278,22 @@ Benchmarks (Exciting!)
 
     (thack2012)[nai:~/Work/thack2012]$ siege -c50 -r10 -v http://dev.tripevent.co/
 
-    Without Varnish (nginx only)
+    With Varnish
+
+    Transactions:                   500 hits
+    Availability:                100.00 %
+    Elapsed time:                  9.76 secs
+    Data transferred:             0.54 MB
+    Response time:                  0.20 secs
+    Transaction rate:            51.23 trans/sec
+    Throughput:                  0.06 MB/sec
+    Concurrency:                 10.25
+    Successful transactions:         500
+    Failed transactions:                0
+    Longest transaction:             1.45
+    Shortest transaction:             0.12
+
+    Without Varnish
 
     Transactions:                   500 hits
     Availability:                100.00 %
@@ -278,6 +307,8 @@ Benchmarks (Exciting!)
     Failed transactions:                0
     Longest transaction:             1.73
     Shortest transaction:             0.14
+
+What you don't see here is the CPU utilization. Nginx uses a little bit more but not significantly.
 
 Useful Links
 ------------
