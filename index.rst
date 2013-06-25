@@ -11,7 +11,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-    varnish
+   varnish
 
 
 Indices and tables
