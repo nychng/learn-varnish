@@ -9,9 +9,9 @@ Welcome to Learn Varnish's documentation!
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+    :maxdepth: 2
 
-   varnish
+    varnish
 
 
 Indices and tables
