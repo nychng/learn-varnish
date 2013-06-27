@@ -310,6 +310,11 @@ Benchmarks (Exciting!)
 
 What you don't see here is the CPU utilization. Nginx uses a little bit more but not significantly.
 
+Alternatives
+------------
+
+1. http://www.squid-cache.org/
+
 Useful Links
 ------------
 
